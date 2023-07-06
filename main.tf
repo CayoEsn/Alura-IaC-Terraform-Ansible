@@ -17,7 +17,13 @@ provider "aws" {
 resource "aws_instance" "ec2_iac_terraform" {
   ami           = "ami-03f65b8614a860c29"
   instance_type = "t2.micro"
-  key_name = "alura-iac-terraform"
+  key_name      = "alura-iac-terraform"
+  # user_data     = <<-EOF
+  #             #!/bin/bash
+  #             cd /home/ubuntu
+  #             echo "Hello World feito com Terraform" > index.html
+  #             nohup busybox httpd -f -p 8080 &
+  #             EOF
 
   tags = {
     Name = "alura-iac-terraform"

@@ -26,6 +26,6 @@ resource "aws_instance" "ec2_iac_terraform" {
   #             EOF
 
   tags = {
-    Name = "alura-iac-terraform"
+    Name = "alura-iac-aws-python"
   }
 }
